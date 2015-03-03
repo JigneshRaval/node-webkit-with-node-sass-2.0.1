@@ -7,20 +7,20 @@ var path    = require('path');
 var fs = require('fs');
 var util = require('util');
 
-
-var test2 = require('node-sass');
-var test1 = require('node-sass').info();
-var result = ""; //test2.renderSync({ data: 'body{background:blue; a{color:black;}}' })
-
-console.log("SASS", test2, test1, result);
-
 var gui = global.window.nwDispatcher.requireNwGui();
 var gui = global.window.nwDispatcher.requireNwGui();
 var win = gui.Window.get();
 console.log("GUI", win.showDevTools());
-//win.maximize();
-//var rapi = require(path.join(dirname, '/controllers/routes/scss'));
 
+
+var test2 = require('node-sass');
+
+console.log("TEST 2", test2);
+
+var test1 = require('node-sass').info();
+var result = test2.renderSync({ data: 'body{background:blue; a{color:black;}}' }).css
+
+console.log("SASS", test2, test1, result);
 
 var bodyParser = require('body-parser');
 
